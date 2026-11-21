@@ -518,6 +518,7 @@ h2.title{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,6
   .portrait{margin:0 18px}
   .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--signal);color:var(--ink);border-radius:16px;padding:14px 20px;text-decoration:none;flex-direction:column;box-shadow:0 14px 30px -10px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .4s}
   .mcta.show{transform:none}
+  .mcta.show.away{transform:translateY(140%)}
   .foot{padding-bottom:120px}
   .mcta strong{font-size:16px}
   .mcta span{font-size:13px}
@@ -1108,6 +1109,9 @@ h2.title{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,6
     mcta.classList.toggle('show',y>h);
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var hideZones=0;
+  var zIO=new IntersectionObserver(function(es){es.forEach(function(e){hideZones+=e.isIntersecting?1:-1;if(hideZones<0)hideZones=0});mcta.classList.toggle('away',hideZones>0)},{threshold:0});
+  ['.book','.foot'].forEach(function(q){var el=document.querySelector(q);if(el)zIO.observe(el)});
   document.getElementById('burger').addEventListener('click',function(){hdr.classList.toggle('open');hdr.classList.add('solid')});
   document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open')})});
 
