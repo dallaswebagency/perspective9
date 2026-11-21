@@ -59,6 +59,7 @@ h2.title{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,6
 .hdr nav a{text-decoration:none;color:var(--paper);font-weight:500;font-size:15px;opacity:.85}
 .hdr nav a:hover{opacity:1;color:var(--signal)}
 .hdr .btn{padding:11px 20px;font-size:15px}
+.hdr.dim{background:rgba(11,13,12,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(243,244,241,.08)}
 .hdr.solid{background:rgba(243,244,241,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
 .hdr.solid .logo .light{display:none}
 .hdr.solid .logo .dark{display:block}
@@ -189,7 +190,7 @@ h2.title{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,6
 .method{padding:120px 0;background:var(--paper-2);position:relative}
 .method-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:64px}
 .pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
-.pipe::before{content:"";position:absolute;top:31px;left:32px;right:32px;height:2px;background:linear-gradient(90deg,var(--ink) 0%,var(--ink) var(--p,0%),var(--line) var(--p,0%));transition:--p 1s}
+.pipe::before{content:"";position:absolute;top:31px;left:32px;right:calc(33.333% - 32px);height:2px;background:linear-gradient(90deg,var(--ink) 0%,var(--ink) var(--p,0%),var(--line) var(--p,0%));transition:--p 1s}
 .stage{padding-right:44px;position:relative}
 .stage .bullet{width:64px;height:64px;border-radius:50%;background:var(--paper-2);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;position:relative;z-index:1;transition:background .5s,color .5s}
 .stage.lit .bullet{background:var(--ink);color:var(--signal)}
@@ -466,8 +467,8 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
   <div class="wrap">
     <div class="reviews-top reveal">
       <div>
-        <span class="eyebrow mono">What clients say</span>
-        <h2 class="title" style="margin-top:16px">Five stars on Google.</h2>
+        <span class="eyebrow mono">01 · ★★★★★ on Google</span>
+        <h2 class="title" style="margin-top:16px">What clients say</h2>
       </div>
       <a class="link-arrow" href="https://share.google/mgmFYEQjqCUgTwrzD" target="_blank" rel="noopener">Read all reviews on Google ↗</a>
     </div>
@@ -500,7 +501,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
 <section class="tug">
   <div class="wrap grid">
     <div class="reveal">
-      <span class="eyebrow mono">The problem</span>
+      <span class="eyebrow mono">02</span>
       <h2 class="title" style="margin-top:18px">Are your ads working with you, or against you?</h2>
       <p class="intro">Google and Meta count every visitor to your site, including repeat buyers and people already searching your brand name, and report the sale as their own. Brands spending hundreds of millions can absorb that noise. For a growing brand, it decides which side your ads are on.</p>
     </div>
@@ -536,7 +537,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
 <section class="check">
   <div class="wrap grid">
     <div class="sticky reveal">
-      <span class="eyebrow mono">Self-check</span>
+      <span class="eyebrow mono">03</span>
       <h2 class="title" style="margin-top:18px">Is your ad spend working as hard as it could?</h2>
       <p class="sub">Four questions. Answer honestly, there's no email gate.</p>
       <div class="gauge" aria-live="polite">
@@ -562,7 +563,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
   <div class="wrap">
     <div class="method-head reveal">
       <div>
-        <span class="eyebrow mono">How it works</span>
+        <span class="eyebrow mono">04</span>
         <h2 class="title" style="margin-top:18px">Fix first, then grow</h2>
       </div>
     </div>
@@ -585,7 +586,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
   <div class="wrap">
     <div class="case-top reveal">
       <div>
-        <span class="eyebrow mono">Case study: supplements and wellness brand</span>
+        <span class="eyebrow mono">05 · Case study: supplements and wellness brand</span>
         <h2 class="title" style="margin-top:18px">Less noise, more new customers</h2>
       </div>
       <p>The brand was running Google's automated campaigns on a store that wasn't ready to sell. The product pages, reviews, site speed and tracking were rebuilt first, so Google learned from real buyers instead of noise. Then the campaigns were rebuilt around new customers.</p>
@@ -620,7 +621,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
 <section class="compare">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow mono">Perspective9 vs many agencies</span>
+      <span class="eyebrow mono">06</span>
       <h2 class="title" style="margin-top:18px">How this differs from a typical agency</h2>
     </div>
     <div class="cmp reveal">
@@ -639,7 +640,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
 <section class="fit">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow mono">Fit</span>
+      <span class="eyebrow mono">07</span>
       <h2 class="title" style="margin-top:18px">Is this a good fit?</h2>
     </div>
     <div class="fit-grid">
@@ -678,7 +679,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
       <div class="badge"><b>16 years</b><span>in paid media</span></div>
     </div>
     <div class="about-copy reveal">
-      <span class="eyebrow mono">Who you'd be working with</span>
+      <span class="eyebrow mono">08 · Who you'd be working with</span>
       <p class="pull">I learned paid media inside big agencies and big brands, where getting measurement wrong is expensive. Now I bring that experience to growing brands.</p>
       <p>You deal with me directly, and I do the work, from the first audit to the last campaign change. I reply to email the same business day, and nothing goes live without me checking it.</p>
       <div class="story">
@@ -694,7 +695,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
 <section class="start">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow mono">Services</span>
+      <span class="eyebrow mono">09</span>
       <h2 class="title" style="margin-top:18px">Where to start</h2>
     </div>
     <div class="plans">
@@ -791,7 +792,7 @@ footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
   var hdr=document.getElementById('hdr'),hero=document.querySelector('.hero'),mcta=document.getElementById('mcta');
   function onScroll(){
     var y=window.scrollY,h=hero.offsetHeight-80;
-    hdr.classList.toggle('solid',y>h);
+    hdr.classList.toggle('solid',y>h);hdr.classList.toggle('dim',y>20&&y<=h);
     mcta.classList.toggle('show',y>h);
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
