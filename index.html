@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google and Meta ads for ecommerce and service businesses: Perspective9</title>
+<meta name="description" content="Google and Meta ads for ecommerce brands and high-value service businesses across Australia and NZ, measured by new customers and sales in your own records.">
+<meta name="theme-color" content="#0b0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0d0c;
+  --ink-2:#151917;
+  --ink-3:#1f2522;
+  --paper:#f3f4f1;
+  --paper-2:#e8eae4;
+  --line:#d6d9d1;
+  --signal:#5bd48e;
+  --signal-soft:#c9f2d9;
+  --forest:#1f4d3a;
+  --mute:#5d655f;
+  --mute-d:#9aa39d;
+  --noise:#e4572e;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --wrap:1240px;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:999px;transition:transform .2s,background .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn-signal{background:var(--signal);color:var(--ink)}
+.btn-signal:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(91,212,142,.6)}
+.btn-ghost{color:var(--paper);border:1px solid rgba(243,244,241,.3)}
+.btn-ghost:hover{border-color:var(--signal);color:var(--signal)}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:var(--forest);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--forest)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px rgba(91,212,142,.25)}
+h2.title{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.02;letter-spacing:-.02em}
+
+/* HEADER */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.hdr .logo img{height:28px;width:auto}
+.hdr .logo .dark{display:none}
+.hdr nav{display:flex;align-items:center;gap:34px}
+.hdr nav a{text-decoration:none;color:var(--paper);font-weight:500;font-size:15px;opacity:.85}
+.hdr nav a:hover{opacity:1;color:var(--signal)}
+.hdr .btn{padding:11px 20px;font-size:15px}
+.hdr.solid{background:rgba(243,244,241,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.hdr.solid .logo .light{display:none}
+.hdr.solid .logo .dark{display:block}
+.hdr.solid nav a{color:var(--ink)}
+.hdr.solid nav a:hover{color:var(--forest)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;width:24px;background:var(--paper);margin:6px auto;transition:.3s}
+.hdr.solid .burger span{background:var(--ink)}
+
+/* HERO */
+.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;padding-top:78px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 78px);max-height:900px}
+.hero-copy{padding:70px 0 140px;position:relative;z-index:2;align-self:center}
+.hero-tag{display:flex;align-items:center;gap:12px;color:var(--mute-d);margin-bottom:30px}
+.hero-tag .dot{width:9px;height:9px;border-radius:50%;background:var(--signal);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(91,212,142,.6)}70%{box-shadow:0 0 0 12px rgba(91,212,142,0)}100%{box-shadow:0 0 0 0 rgba(91,212,142,0)}}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,6.4vw,92px);line-height:.96;letter-spacing:-.035em}
+.hero h1 .line{display:block}
+.hero h1 .strike{position:relative;color:var(--mute-d)}
+.hero h1 .strike::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:.09em;background:var(--noise);transform:scaleX(0);transform-origin:left;animation:strike .9s .9s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes strike{to{transform:scaleX(1)}}
+.hero h1 .win{color:var(--signal)}
+.hero p.lede{font-size:20px;line-height:1.55;color:#c8cec9;max-width:520px;margin:30px 0 36px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-note{margin-top:18px;font-size:14px;color:var(--mute-d)}
+.hero-photo{position:relative;margin-right:calc((100vw - var(--wrap))/-2 - 28px)}
+.hero-photo picture,.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--ink) 0%,rgba(11,13,12,0) 38%),linear-gradient(0deg,var(--ink) 0%,rgba(11,13,12,0) 30%)}
+.hero-name{position:absolute;z-index:2;right:max(28px,calc((100vw - var(--wrap))/2 + 28px));bottom:150px;text-align:right}
+.hero-name strong{display:block;font-family:var(--display);font-size:20px;font-weight:700}
+.hero-name span{color:var(--mute-d);font-size:14px}
+.readout{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid rgba(243,244,241,.12);background:rgba(11,13,12,.75);backdrop-filter:blur(10px)}
+.readout .wrap{display:grid;grid-template-columns:1fr 1fr 1.3fr;}
+.readout .cell{padding:24px 0;display:flex;align-items:center;gap:16px}
+.readout .cell + .cell{padding-left:32px;border-left:1px solid rgba(243,244,241,.12)}
+.readout .num{font-family:var(--display);font-size:34px;font-weight:700;color:var(--signal);line-height:1}
+.readout .lbl{font-size:14px;color:#c8cec9;line-height:1.3}
+.gstrip{text-decoration:none;display:flex;align-items:center;gap:14px}
+.gstrip .faces{display:flex}
+.gstrip .faces span{width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid var(--ink);display:grid;place-items:center;margin-left:-8px;overflow:hidden;font-weight:700;font-size:13px;color:var(--ink)}
+.gstrip .faces span:first-child{margin-left:0}
+.gstrip .faces img{width:24px;height:auto}
+.stars{color:#f6c445;letter-spacing:2px;font-size:15px}
+.gstrip:hover .lbl{color:var(--signal)}
+
+/* LOGOS */
+.logos{padding:90px 0 80px;border-bottom:1px solid var(--line)}
+.logos-head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:54px}
+.logos-head .big{font-family:var(--display);font-weight:800;font-size:clamp(56px,8vw,112px);line-height:.9;letter-spacing:-.04em}
+.logos-head .big small{display:block;font-size:20px;font-weight:600;letter-spacing:0;margin-top:14px;color:var(--mute)}
+.logos-head p{color:var(--mute);font-size:16px}
+.logos-head p + p{margin-top:12px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:70px;width:max-content;animation:slide 48s linear infinite;align-items:center;padding:14px 0}
+.track.rev{animation-direction:reverse;animation-duration:54s}
+.marquee:hover .track{animation-play-state:paused}
+.track img{height:40px;width:auto;max-width:140px;object-fit:contain;filter:grayscale(1);opacity:.75;transition:.3s}
+.track img:hover{filter:none;opacity:1}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* REVIEWS */
+.reviews{padding:110px 0}
+.reviews-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;margin-top:50px}
+.q{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;transition:transform .3s,box-shadow .3s}
+.q:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(11,13,12,.3)}
+.q blockquote{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.3;letter-spacing:-.01em}
+.q.lead{grid-column:span 7;background:var(--forest);color:var(--paper);border:0}
+.q.lead blockquote{font-size:clamp(28px,3vw,40px);line-height:1.12}
+.q.lead .who span{color:#b9d6c6}
+.q.s5{grid-column:span 5}
+.q.s4{grid-column:span 4}
+.q.s8{grid-column:span 8}
+.who{display:flex;align-items:center;gap:12px;font-size:15px}
+.who strong{display:block}
+.who span{color:var(--mute);font-size:14px}
+.reviews-top{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--signal);padding-bottom:3px}
+.link-arrow:hover{color:var(--forest)}
+
+/* WITH / AGAINST */
+.tug{background:var(--ink);color:var(--paper);padding:120px 0;position:relative;overflow:hidden}
+.tug .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.tug .eyebrow{color:var(--mute-d)}
+.tug p.intro{color:#c8cec9;font-size:18px;margin-top:26px}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;background:var(--ink-3);border-radius:999px;padding:6px;position:relative;margin-bottom:34px}
+.switch button{position:relative;z-index:2;background:none;border:0;color:var(--mute-d);font:600 15px var(--body);padding:12px 26px;cursor:pointer;transition:color .3s;white-space:nowrap}
+.switch button.on{color:var(--ink)}
+.switch .knob{position:absolute;z-index:1;top:6px;bottom:6px;left:6px;width:calc(50% - 6px);border-radius:999px;background:var(--noise);transition:transform .45s cubic-bezier(.7,0,.3,1),background .45s}
+.switch.with .knob{transform:translateX(100%);background:var(--signal)}
+.panel{display:none;background:var(--ink-2);border:1px solid var(--ink-3);border-radius:22px;padding:38px}
+.panel.on{display:block;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel h3{font-family:var(--display);font-size:28px;font-weight:700;margin-bottom:22px;line-height:1.15}
+.panel ul{list-style:none;display:grid;gap:4px}
+.panel li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--ink-3);color:#d7dcd8}
+.panel li i{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:700;margin-top:2px}
+.panel.against li i{background:rgba(228,87,46,.15);color:var(--noise)}
+.panel.with li i{background:rgba(91,212,142,.15);color:var(--signal)}
+
+/* SELF CHECK */
+.check{padding:120px 0}
+.check .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.check .sticky{position:sticky;top:120px}
+.check .sub{color:var(--mute);font-size:18px;margin-top:20px}
+.gauge{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.gauge-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 20px}
+.gauge-bar span{height:12px;border-radius:6px;background:var(--paper-2);transition:background .4s}
+.gauge-bar span.y{background:var(--noise)}
+.gauge-bar.ok span.y{background:var(--signal)}
+.gauge .count{font-family:var(--display);font-size:46px;font-weight:800;line-height:1}
+.gauge .count small{font-size:18px;color:var(--mute);font-weight:600}
+.result{display:none;font-size:16px;line-height:1.55}
+.result.on{display:block;animation:fade .4s}
+.result strong{font-weight:700}
+.gauge .btn{margin-top:22px}
+.qs{display:grid;gap:16px}
+.qq{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;display:grid;grid-template-columns:44px 1fr;gap:16px;transition:border-color .3s}
+.qq .n{font-family:var(--mono);font-size:14px;color:var(--mute);padding-top:3px}
+.qq p{font-weight:600;font-size:18px;line-height:1.4}
+.yn{display:flex;gap:10px;margin-top:16px}
+.yn button{font:600 14px var(--body);padding:9px 22px;border-radius:999px;border:1px solid var(--line);background:var(--paper);cursor:pointer;transition:.2s}
+.yn button:hover{border-color:var(--ink)}
+.yn button.sel[data-v="1"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.yn button.sel[data-v="0"]{background:var(--signal-soft);border-color:var(--signal)}
+.qq.answered{border-color:#bfc4bb}
+
+/* METHOD */
+.method{padding:120px 0;background:var(--paper-2);position:relative}
+.method-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:64px}
+.pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.pipe::before{content:"";position:absolute;top:31px;left:32px;right:32px;height:2px;background:linear-gradient(90deg,var(--ink) 0%,var(--ink) var(--p,0%),var(--line) var(--p,0%));transition:--p 1s}
+.stage{padding-right:44px;position:relative}
+.stage .bullet{width:64px;height:64px;border-radius:50%;background:var(--paper-2);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;position:relative;z-index:1;transition:background .5s,color .5s}
+.stage.lit .bullet{background:var(--ink);color:var(--signal)}
+.stage h3{font-family:var(--display);font-size:30px;font-weight:700;margin:30px 0 12px;letter-spacing:-.01em}
+.stage p{color:#3c433e}
+.stack{margin-top:80px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;border-top:1px solid #c8ccc3;padding-top:34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{font-family:var(--mono);font-size:13px;padding:9px 16px;border-radius:999px;background:var(--paper);border:1px solid #c8ccc3}
+
+/* CASE */
+.case{background:var(--ink);color:var(--paper);padding:120px 0}
+.case-top{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:60px}
+.case-top .eyebrow{color:var(--mute-d)}
+.case-top p{color:#c8cec9;font-size:18px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink-3);border-radius:22px;overflow:hidden}
+.kpi{padding:36px 34px;background:var(--ink-2)}
+.kpi + .kpi{border-left:1px solid var(--ink-3)}
+.kpi .v{font-family:var(--display);font-weight:800;font-size:clamp(46px,5.4vw,76px);line-height:1;letter-spacing:-.03em;color:var(--signal)}
+.kpi .l{color:#c8cec9;margin-top:12px;font-size:16px}
+.chart-card{margin-top:22px;background:var(--ink-2);border:1px solid var(--ink-3);border-radius:22px;padding:34px}
+.chart-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px}
+.chart-head h3{font-family:var(--display);font-size:22px;font-weight:700}
+.legend{display:flex;gap:22px;font-size:14px;color:#c8cec9}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+.chart{display:grid;grid-template-columns:34px 1fr;gap:10px}
+.yaxis{display:flex;flex-direction:column;justify-content:space-between;height:260px;font-family:var(--mono);font-size:11px;color:var(--mute-d);text-align:right;padding-bottom:0}
+.plot{position:relative;height:260px;border-bottom:1px solid #3a423d}
+.plot .gl{position:absolute;left:0;right:0;border-top:1px dashed #2b322e}
+.bars{position:absolute;inset:0;display:grid;grid-template-columns:repeat(13,1fr);gap:clamp(4px,1.2vw,16px);align-items:end}
+.bar{display:flex;flex-direction:column-reverse;gap:2px;height:100%;justify-content:flex-start;position:relative}
+.bar .f,.bar .r{border-radius:4px 4px 2px 2px;height:0;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.bar .f{background:var(--signal)}
+.bar .r{background:#5f6a64}
+.bar .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--paper);color:var(--ink);font-size:12px;padding:6px 9px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s;font-family:var(--mono);z-index:3}
+.bar:hover .tip{opacity:1}
+.bar .flag{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#f6c445;white-space:nowrap}
+.xaxis{display:grid;grid-template-columns:repeat(13,1fr);gap:clamp(4px,1.2vw,16px);margin-left:44px;margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--mute-d)}
+.xaxis span{text-align:center;white-space:nowrap}
+.xaxis span:nth-child(even){visibility:hidden}
+.case-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:26px;color:var(--mute-d);font-size:14px}
+.case-foot .link-arrow{color:var(--paper)}
+
+/* COMPARE */
+.compare{padding:120px 0}
+.cmp{margin-top:56px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.cmp-row{display:grid;grid-template-columns:.8fr 1.2fr 1fr;border-top:1px solid var(--line)}
+.cmp-row:first-child{border-top:0}
+.cmp-row > div{padding:24px 28px}
+.cmp-row .k{font-family:var(--display);font-weight:700;font-size:19px}
+.cmp-row .us{background:#f2fbf5;border-left:3px solid var(--signal);font-weight:500}
+.cmp-row .them{color:var(--mute)}
+.cmp-row.h > div{padding:18px 28px}
+.cmp-row.h .us{background:var(--forest);color:var(--paper);border-left-color:var(--signal)}
+.cmp-row.h .them{background:var(--paper-2);color:var(--ink)}
+
+/* FIT */
+.fit{padding:0 0 120px}
+.fit-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:56px}
+.fit-col{border-radius:22px;padding:42px}
+.fit-yes{background:var(--signal-soft)}
+.fit-no{background:var(--ink);color:var(--paper)}
+.fit-col h3{font-family:var(--display);font-size:30px;font-weight:800;margin-bottom:22px}
+.fit-col ul{list-style:none}
+.fit-col li{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:13px 0;border-top:1px solid rgba(11,13,12,.12)}
+.fit-no li{border-color:rgba(243,244,241,.12);color:#d7dcd8}
+.fit-col li b{font-family:var(--mono);font-weight:600}
+.fit-yes li b{color:var(--forest)}
+.fit-no li b{color:var(--noise)}
+.fit-or{margin:20px 0 6px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest)}
+.fit-or + p{background:rgba(255,255,255,.55);border-radius:14px;padding:18px 20px}
+
+/* ABOUT */
+.about{background:var(--paper-2);padding:120px 0}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.portrait{position:relative}
+.portrait .frame{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:9/8;background:#d0d3cc}
+.portrait .frame img{width:100%;height:100%;object-fit:cover}
+.portrait .bar-sig{position:absolute;left:-18px;top:40px;bottom:40px;width:8px;border-radius:4px;background:var(--signal)}
+.portrait .badge{position:absolute;right:-22px;bottom:34px;background:var(--ink);color:var(--paper);border-radius:16px;padding:18px 22px;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.portrait .badge b{display:block;font-family:var(--display);font-size:34px;color:var(--signal);line-height:1}
+.portrait .badge span{font-size:14px;color:#c8cec9}
+.about-copy p{font-size:18px;color:#2f3531;margin-top:20px}
+.about-copy p.pull{font-family:var(--display);font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--ink);letter-spacing:-.01em}
+.about-copy .story{margin-top:28px;background:#fff;border-radius:var(--r);padding:26px 28px;border:1px solid var(--line)}
+.about-copy .story p{margin-top:0;font-size:17px}
+.about-copy .story .link-arrow{margin-top:16px}
+.about-copy .life{font-size:16px;color:var(--mute);font-style:italic}
+
+/* PRICING */
+.start{padding:120px 0}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.plan{border:1px solid var(--line);background:#fff;border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;text-decoration:none;transition:transform .3s,box-shadow .3s,border-color .3s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(11,13,12,.45);border-color:var(--ink)}
+.plan .tag{align-self:flex-start;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--signal);color:var(--ink);margin-bottom:18px}
+.plan h3{font-family:var(--display);font-weight:700;font-size:23px;line-height:1.15}
+.plan .price{font-family:var(--display);font-weight:800;font-size:40px;letter-spacing:-.02em;margin:16px 0 4px;line-height:1}
+.plan .price small{font-size:15px;font-weight:600;color:var(--mute);letter-spacing:0}
+.plan dl{margin-top:20px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:14px;flex:1}
+.plan dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.plan dd{font-size:15px;line-height:1.5;margin-top:4px}
+.plan .go{margin-top:22px;font-weight:600;display:flex;align-items:center;gap:8px}
+.plan.first{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.plan.first .price small,.plan.first dt{color:var(--mute-d)}
+.plan.first dl{border-color:var(--ink-3)}
+.plan.first .go{color:var(--signal)}
+.fine{margin-top:26px;color:var(--mute);font-size:15px}
+
+/* FINAL */
+.final{padding:0 0 110px}
+.final-box{background:var(--forest);color:var(--paper);border-radius:28px;padding:70px 60px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.final-box::after{content:"9";position:absolute;right:-20px;bottom:-110px;font-family:var(--display);font-weight:800;font-size:420px;line-height:1;color:rgba(91,212,142,.12);pointer-events:none}
+.final-box h2{font-family:var(--display);font-weight:800;font-size:clamp(36px,4.4vw,58px);line-height:1;letter-spacing:-.03em}
+.final-box p{color:#cfe2d7;font-size:18px;margin-top:16px}
+.final-actions{display:flex;flex-direction:column;gap:14px;align-items:flex-start;position:relative;z-index:1}
+.final-actions .btn-ghost{border-color:rgba(243,244,241,.4)}
+.final-actions .mail{color:#cfe2d7;font-size:15px;margin-top:8px}
+.final-actions .mail a{color:var(--paper)}
+
+/* FOOTER */
+footer{background:var(--ink);color:var(--paper);padding:60px 0 34px}
+.ft{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.ft img{height:26px;width:auto}
+.ft nav{display:flex;gap:28px;flex-wrap:wrap}
+.ft nav a{text-decoration:none;color:#c8cec9}
+.ft nav a:hover{color:var(--signal)}
+.social{display:flex;gap:12px}
+.social a{width:42px;height:42px;border-radius:50%;border:1px solid var(--ink-3);display:grid;place-items:center;transition:.2s}
+.social a:hover{border-color:var(--signal);color:var(--signal)}
+.social svg{width:18px;height:18px}
+.fb{margin-top:46px;padding-top:24px;border-top:1px solid var(--ink-3);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--mute-d);font-size:14px}
+.fb a{color:var(--mute-d)}
+
+/* MOBILE STICKY */
+.mcta{display:none}
+
+@media (max-width:1060px){
+  .plans{grid-template-columns:1fr 1fr}
+  .readout .wrap{grid-template-columns:1fr 1fr}
+  .readout .cell:last-child{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid rgba(243,244,241,.12)}
+}
+@media (max-width:900px){
+  .hdr nav{display:none}
+  .burger{display:block}
+  .hdr.open nav{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:20px;background:var(--paper);padding:28px;box-shadow:0 20px 30px -20px rgba(0,0,0,.3)}
+  .hdr.open nav a{color:var(--ink);font-size:18px}
+  .hero-grid{grid-template-columns:1fr;max-height:none;min-height:0}
+  .hero-photo{order:-1;height:56vh;min-height:340px;margin:0 -28px}
+  .hero-photo::before{background:linear-gradient(0deg,var(--ink) 0%,rgba(11,13,12,0) 45%)}
+  .hero-name{bottom:30px;right:28px}
+  .hero-copy{padding:10px 0 60px}
+  .readout{position:relative}
+  .logos-head,.tug .grid,.check .grid,.case-top,.about-grid,.final-box,.fit-grid{grid-template-columns:1fr;gap:36px}
+  .check .sticky{position:static}
+  .reviews-grid > .q{grid-column:1/-1}
+  .pipe{grid-template-columns:1fr;gap:40px}
+  .pipe::before{display:none}
+  .stage{padding-right:0}
+  .stack{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
+  .kpi + .kpi{border-left:0;border-top:1px solid var(--ink-3)}
+  .cmp-row{grid-template-columns:1fr 1fr}
+  .cmp-row .k{grid-column:1/-1;padding-bottom:0 !important;background:#fff}
+  .cmp-row.h .k{display:none}
+  .portrait{margin:0 18px}
+  .final-box{padding:48px 30px}
+  .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--signal);color:var(--ink);border-radius:16px;padding:14px 20px;text-decoration:none;flex-direction:column;box-shadow:0 14px 30px -10px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .4s}
+  .mcta.show{transform:none}
+  .mcta strong{font-size:16px}
+  .mcta span{font-size:13px}
+  footer{padding-bottom:110px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .hero-photo{margin:0 -20px}
+  .plans{grid-template-columns:1fr}
+  .readout .wrap{grid-template-columns:1fr}
+  .readout .cell + .cell{border-left:0;padding-left:0;border-top:1px solid rgba(243,244,241,.12)}
+  .switch button{padding:11px 16px;font-size:14px}
+  .panel,.fit-col{padding:28px 22px}
+  .chart-card{padding:24px 16px}
+  .xaxis span:nth-child(even),.xaxis span:nth-child(4n+3){visibility:hidden}
+  .bar .flag{font-size:8px}
+  .cmp-row > div{padding:16px 18px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="https://perspective9.com/" aria-label="Perspective9 home">
+      <img class="light" src="https://perspective9.com/_astro/perspective9-logo-white.DV5XGG6A.svg" alt="Logo: Perspective9">
+      <img class="dark" src="https://perspective9.com/_astro/perspective9-logo.D1vJ13HF.svg" alt="Logo: Perspective9">
+    </a>
+    <nav id="nav">
+      <a href="https://perspective9.com/services">Services</a>
+      <a href="https://perspective9.com/work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://perspective9.com/contact">Contact</a>
+      <a class="btn btn-signal" href="https://perspective9.com/contact">Book a free fit check</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-tag mono"><span class="dot"></span>Mo Wazirzada · Founder, Perspective9</div>
+      <h1>
+        <span class="line"><span class="strike">ROAS</span> doesn't</span>
+        <span class="line">grow brands.</span>
+        <span class="line win">New customers do.</span>
+      </h1>
+      <p class="lede">I fix the foundations, so your ad budget works with you and wins customers you didn't already have.</p>
+      <div class="hero-cta">
+        <a class="btn btn-signal" href="https://perspective9.com/contact">Book a free fit check
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-ghost" href="#results">See the results</a>
+      </div>
+      <p class="hero-note">A free 20-minute call. If it's a fit, you also get a free ads audit.</p>
+    </div>
+    <div class="hero-photo">
+      <picture>
+        <source media="(max-width:900px)" srcset="https://perspective9.com/_astro/hero-ink-phone.CUrOB-2f_Z1nUhzt.avif" type="image/avif">
+        <source srcset="https://perspective9.com/_astro/hero-ink.BTOkej61_aejWM.avif" type="image/avif">
+        <img src="https://perspective9.com/_astro/hero-ink.BTOkej61_1xaYtu.webp" alt="Mo Wazirzada, founder of Perspective9." fetchpriority="high">
+      </picture>
+      <div class="hero-name"><strong>Mo Wazirzada</strong><span>Founder, Perspective9</span></div>
+    </div>
+  </div>
+  <div class="readout">
+    <div class="wrap">
+      <div class="cell"><span class="num" data-count="18.5" data-pre="$" data-suf="M+" data-dec="1">$18.5M+</span><span class="lbl">in ad spend<br>managed</span></div>
+      <div class="cell"><span class="num" data-count="16" data-dec="0">16</span><span class="lbl">years in<br>paid media</span></div>
+      <div class="cell">
+        <a class="gstrip" href="https://share.google/mgmFYEQjqCUgTwrzD" target="_blank" rel="noopener">
+          <span class="faces">
+            <span><img src="https://perspective9.com/_astro/review-tbw.C6LAHibs_Z2dIcSV.webp" alt="Total Businesswear, Google reviewer"></span>
+            <span><img src="https://perspective9.com/_astro/review-nanotech.C53FYQBo_Z1H5inf.webp" alt="Nanotech Coatings, Google reviewer"></span>
+            <span><img src="https://perspective9.com/_astro/review-entrancemat.CToY0N0w_opeDe.webp" alt="Entrance Mat Australia, Google reviewer"></span>
+            <span><img src="https://perspective9.com/_astro/review-moneyclub.Ca6sxLhM_gyz1u.webp" alt="The Money Club, Google reviewer"></span>
+            <span>R</span>
+          </span>
+          <span><span class="stars">★★★★★</span><br><span class="lbl">What clients say on Google</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<section class="logos">
+  <div class="wrap">
+    <div class="logos-head reveal">
+      <div class="big"><span data-count="18.5" data-pre="$" data-suf="M+" data-dec="1">$18.5M+</span><small>in ad spend managed over 16 years</small></div>
+      <div>
+        <p>Brands I worked on at agencies, and companies I worked for in-house. None are Perspective9 clients.</p>
+        <p>Agency roles at PHD, Dentsu Aegis, Atomic 212 and Online Marketing Gurus, adtech at Criteo, and in-house at Fairfax Media, CareerOne and Médecins Sans Frontières.</p>
+      </div>
+    </div>
+  </div>
+  <div class="marquee"><div class="track" id="track1"></div></div>
+  <div class="marquee"><div class="track rev" id="track2"></div></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="reviews-top reveal">
+      <div>
+        <span class="eyebrow mono">What clients say</span>
+        <h2 class="title" style="margin-top:16px">Five stars on Google.</h2>
+      </div>
+      <a class="link-arrow" href="https://share.google/mgmFYEQjqCUgTwrzD" target="_blank" rel="noopener">Read all reviews on Google ↗</a>
+    </div>
+    <div class="reviews-grid">
+      <figure class="q lead reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“He said be patient and sure enough it has paid off.”</blockquote>
+        <figcaption class="who"><div><strong>Richard Jarjoura</strong><span>Total Businesswear</span></div></figcaption>
+      </figure>
+      <figure class="q s5 reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“Always going over and beyond in keeping my business going in the right direction in Google Ads and continuous website work.”</blockquote>
+        <figcaption class="who"><div><strong>John Malaspina</strong><span>Nanotech Coatings Group</span></div></figcaption>
+      </figure>
+      <figure class="q s8 reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“...looking for clarity around their marketing approach and practical steps in achieving big goals for their business.”</blockquote>
+        <figcaption class="who"><div><strong>Sam Eljerban</strong><span>The Money Club</span></div></figcaption>
+      </figure>
+      <figure class="q s4 reveal">
+        <span class="stars">★★★★★</span>
+        <blockquote>“He is very detail oriented and articulate... He is very transparent and easy to work with.”</blockquote>
+        <figcaption class="who"><div><strong>Jordan Sidhom</strong><span>JS Website Design, website partner</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- WITH / AGAINST -->
+<section class="tug">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow mono">The problem</span>
+      <h2 class="title" style="margin-top:18px">Are your ads working with you, or against you?</h2>
+      <p class="intro">Google and Meta count every visitor to your site, including repeat buyers and people already searching your brand name, and report the sale as their own. Brands spending hundreds of millions can absorb that noise. For a growing brand, it decides which side your ads are on.</p>
+    </div>
+    <div class="reveal">
+      <div class="switch" id="switch" role="tablist">
+        <span class="knob"></span>
+        <button class="on" data-side="against" role="tab">Against you</button>
+        <button data-side="with" role="tab">With you</button>
+      </div>
+      <div class="panel against on" id="p-against">
+        <h3>Against you: the platforms take the wheel</h3>
+        <ul>
+          <li><i>✕</i>Campaigns on autopilot, with budget the only lever</li>
+          <li><i>✕</i>Platform ROAS (return on ad spend, as Google and Meta report it) as the scorecard, and no further questions while orders keep coming in</li>
+          <li><i>✕</i>Returning customers and brand searches counted as wins</li>
+          <li><i>✕</i>Spend goes up, new customer numbers don't</li>
+        </ul>
+      </div>
+      <div class="panel with" id="p-with">
+        <h3>With you: your numbers take the wheel</h3>
+        <ul>
+          <li><i>✓</i>Decisions made on new customer cost, order value, margin and cash flow</li>
+          <li><i>✓</i>Platform reports used as a guide, checked against your own sales data</li>
+          <li><i>✓</i>Clean signals, so the platforms' automation learns from real first-time buyers</li>
+          <li><i>✓</i>Spend grows when new customers do</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELF CHECK -->
+<section class="check">
+  <div class="wrap grid">
+    <div class="sticky reveal">
+      <span class="eyebrow mono">Self-check</span>
+      <h2 class="title" style="margin-top:18px">Is your ad spend working as hard as it could?</h2>
+      <p class="sub">Four questions. Answer honestly, there's no email gate.</p>
+      <div class="gauge" aria-live="polite">
+        <div class="mono" style="color:var(--mute)">Your yeses</div>
+        <div class="count"><span id="yesCount">0</span> <small>/ 4</small></div>
+        <div class="gauge-bar" id="gbar"><span></span><span></span><span></span><span></span></div>
+        <p class="result" data-result="many"><strong>Two or more yeses:</strong> some of your budget is likely going to customers you already have. Book a fit check, and I'll show you where, in your own data.</p>
+        <p class="result" data-result="few"><strong>One or none:</strong> your foundations look solid. A strategy session may be all you need.</p>
+        <a class="btn btn-dark" href="https://perspective9.com/contact">Book a free fit check</a>
+      </div>
+    </div>
+    <div class="qs">
+      <div class="qq reveal"><span class="n">01</span><div><p>Has your ad spend gone up in the past year while new customer numbers stayed flat?</p><div class="yn"><button data-v="1">Yes</button><button data-v="0">No</button></div></div></div>
+      <div class="qq reveal"><span class="n">02</span><div><p>Do Google or Meta report more sales than your own records do?</p><div class="yn"><button data-v="1">Yes</button><button data-v="0">No</button></div></div></div>
+      <div class="qq reveal"><span class="n">03</span><div><p>Would you struggle to say what a new customer costs you right now?</p><div class="yn"><button data-v="1">Yes</button><button data-v="0">No</button></div></div></div>
+      <div class="qq reveal"><span class="n">04</span><div><p>Is most of your budget in Performance Max or Advantage+, with little view of where it goes?</p><div class="yn"><button data-v="1">Yes</button><button data-v="0">No</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="wrap">
+    <div class="method-head reveal">
+      <div>
+        <span class="eyebrow mono">How it works</span>
+        <h2 class="title" style="margin-top:18px">Fix first, then grow</h2>
+      </div>
+    </div>
+    <div class="pipe" id="pipe">
+      <div class="stage reveal"><div class="bullet">1</div><h3>Clean signals.</h3><p>Tracking and customer data set up so Google and Meta learn from people buying for the first time.</p></div>
+      <div class="stage reveal"><div class="bullet">2</div><h3>A smooth path to purchase.</h3><p>Product feed, product pages, site speed and, where it helps, a campaign landing page, so the traffic you pay for can actually buy.</p></div>
+      <div class="stage reveal"><div class="bullet">3</div><h3>Grow what's working.</h3><p>More new customers at a cost that fits your margins, with Google and Meta working together and measured in your own sales data.</p></div>
+    </div>
+    <div class="stack reveal">
+      <span class="mono" style="color:var(--mute)">Works with your stack</span>
+      <div class="chips">
+        <span>Google Ads</span><span>Google Merchant Center</span><span>Google Analytics</span><span>Google Tag Manager</span><span>Meta Ads</span><span>Shopify</span><span>WordPress</span><span>Klaviyo</span><span>Mailchimp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case" id="results">
+  <div class="wrap">
+    <div class="case-top reveal">
+      <div>
+        <span class="eyebrow mono">Case study: supplements and wellness brand</span>
+        <h2 class="title" style="margin-top:18px">Less noise, more new customers</h2>
+      </div>
+      <p>The brand was running Google's automated campaigns on a store that wasn't ready to sell. The product pages, reviews, site speed and tracking were rebuilt first, so Google learned from real buyers instead of noise. Then the campaigns were rebuilt around new customers.</p>
+    </div>
+    <div class="kpis reveal">
+      <div class="kpi"><div class="v" data-count="425" data-dec="0">425</div><div class="l">new customers</div></div>
+      <div class="kpi"><div class="v" data-count="119.5" data-pre="$" data-suf="K" data-dec="1">$119.5K</div><div class="l">net sales</div></div>
+      <div class="kpi"><div class="v" data-count="4.18" data-pre="$" data-dec="2">$4.18</div><div class="l">in revenue for every $1 of ad spend</div></div>
+    </div>
+    <div class="chart-card reveal">
+      <div class="chart-head">
+        <h3>Orders by week: first-time and returning</h3>
+        <div class="legend"><span><i style="background:var(--signal)"></i>First-time orders</span><span><i style="background:#5f6a64"></i>Returning orders</span></div>
+      </div>
+      <div class="chart">
+        <div class="yaxis"><span>90</span><span>60</span><span>30</span><span>0</span></div>
+        <div class="plot" id="plot">
+          <div class="gl" style="top:0"></div><div class="gl" style="top:33.33%"></div><div class="gl" style="top:66.66%"></div>
+          <div class="bars" id="bars"></div>
+        </div>
+      </div>
+      <div class="xaxis" id="xaxis"></div>
+      <div class="case-foot">
+        <span>Shopify and Google Ads, 29 June to 27 September 2025. Google Ads was the only paid advertising, with Shopify Email running alongside.</span>
+        <a class="link-arrow" href="https://perspective9.com/work/supplements-brand">Read the full story →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Perspective9 vs many agencies</span>
+      <h2 class="title" style="margin-top:18px">How this differs from a typical agency</h2>
+    </div>
+    <div class="cmp reveal">
+      <div class="cmp-row h"><div class="k"></div><div class="us mono">Perspective9</div><div class="them mono">Many agencies</div></div>
+      <div class="cmp-row"><div class="k">Who runs your account</div><div class="us">Me, with no more than 8 management clients at a time</div><div class="them">Often an account manager, with junior staff doing the work</div></div>
+      <div class="cmp-row"><div class="k">What counts as success</div><div class="us">New customers and total revenue, in your own sales data</div><div class="them">Often platform ROAS, as Google and Meta report it</div></div>
+      <div class="cmp-row"><div class="k">Where the work stops</div><div class="us">Wherever the problem is: tracking, product pages, the path to purchase</div><div class="them">Usually at the edge of the ad account</div></div>
+      <div class="cmp-row"><div class="k">Your accounts</div><div class="us">Always in your name</div><div class="them">Sometimes held by the agency</div></div>
+      <div class="cmp-row"><div class="k">Where your fee goes</div><div class="us">Senior time on your account, every month. My fee is set by scope and doesn't rise with ad spend.</div><div class="them">Often salaries, office, sales and account management layers</div></div>
+      <div class="cmp-row"><div class="k">Commitment</div><div class="us">Four months, then month to month</div><div class="them">Often 6 to 12 month contracts</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="fit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Fit</span>
+      <h2 class="title" style="margin-top:18px">Is this a good fit?</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-col fit-yes reveal">
+        <h3>Probably, if:</h3>
+        <ul>
+          <li><b>+</b>You sell online, usually turning over $1M to $10M a year, and spend $10,000 or more a month on Google and Meta ads.</li>
+          <li><b>+</b>Your ad dashboards say things are working, but your sales don't feel it.</li>
+          <li><b>+</b>Spend keeps going up while new customer growth stays flat.</li>
+          <li><b>+</b>You want one senior person who looks past the ad account, at tracking, product pages and how sales are followed up.</li>
+          <li><b>+</b>You're willing to fix the basics first, even if the first month is slower.</li>
+        </ul>
+        <div class="fit-or">Or:</div>
+        <p>A service business where one new customer is worth $2,000 or more in profit, spending at least $3,000 a month on Google, and tracking which leads become sales.</p>
+      </div>
+      <div class="fit-col fit-no reveal">
+        <h3>Probably not, if:</h3>
+        <ul>
+          <li><b>–</b>Ad budget under $3,000 a month for lead generation, or under $10,000 for ecommerce.</li>
+          <li><b>–</b>You need video shot and edited. Static ad creative is available, and video comes from your team or creators.</li>
+          <li><b>–</b>You want SEO, email and social posting from the same supplier.</li>
+          <li><b>–</b>You need big results in the first two weeks.</li>
+          <li><b>–</b>You're pre-launch or dropshipping.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait reveal">
+      <span class="bar-sig"></span>
+      <div class="frame"><img src="https://perspective9.com/_astro/profile-mo-studio.CnY-k3sv_Z1RXoLd.webp" alt="Mo Wazirzada, founder of Perspective9." loading="lazy"></div>
+      <div class="badge"><b>16 years</b><span>in paid media</span></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow mono">Who you'd be working with</span>
+      <p class="pull">I learned paid media inside big agencies and big brands, where getting measurement wrong is expensive. Now I bring that experience to growing brands.</p>
+      <p>You deal with me directly, and I do the work, from the first audit to the last campaign change. I reply to email the same business day, and nothing goes live without me checking it.</p>
+      <div class="story">
+        <p>I also follow ads through to the sale, because that's where you find out whether they actually worked. When a long-term client had plenty of enquiries but no orders, I tracked what happened after each form was filled in until we found where deals were stalling.</p>
+        <a class="link-arrow" href="https://perspective9.com/work/total-businesswear">Read how that played out →</a>
+      </div>
+      <p class="life">Away from work I'm a husband and dad who loves to travel. My wife picks the beaches, I pick the mountains, and the drone comes either way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO START -->
+<section class="start">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow mono">Services</span>
+      <h2 class="title" style="margin-top:18px">Where to start</h2>
+    </div>
+    <div class="plans">
+      <a class="plan first reveal" href="https://perspective9.com/contact">
+        <span class="tag">Start here</span>
+        <h3>Free fit check</h3>
+        <div class="price">20 <small>minutes</small></div>
+        <dl>
+          <div><dt>What you get</dt><dd>A call to see whether I can help. If it's a fit, I follow up with a free ads audit: a short video of what your ad spend is really buying and the three fixes worth the most.</dd></div>
+          <div><dt>Great for</dt><dd>Brands that want to know quickly whether this is worth their time.</dd></div>
+        </dl>
+        <span class="go">Book a free fit check →</span>
+      </a>
+      <a class="plan reveal" href="https://perspective9.com/contact">
+        <h3>Strategy session</h3>
+        <div class="price">$350</div>
+        <dl>
+          <div><dt>What you get</dt><dd>90 minutes on your ads, tracking and store. You leave with a written plan: what to switch off, what to fix first, what to test next.</dd></div>
+          <div><dt>Great for</dt><dd>Founders who run their own ads and need a clear plan, at any budget.</dd></div>
+        </dl>
+        <span class="go">Book a strategy session, $350 →</span>
+      </a>
+      <a class="plan reveal" href="https://perspective9.com/services">
+        <h3>Lead generation management</h3>
+        <div class="price">$1,500 <small>a month</small></div>
+        <dl>
+          <div><dt>What you get</dt><dd>Google Search for one business in one market, with call and form tracking, and every lead followed through to the sale.</dd></div>
+          <div><dt>Great for</dt><dd>Businesses where one new customer is worth $2,000 or more in profit.</dd></div>
+        </dl>
+        <span class="go">Services →</span>
+      </a>
+      <a class="plan reveal" href="https://perspective9.com/services">
+        <h3>Ecommerce and multi-channel management</h3>
+        <div class="price">$2,500 <small>a month</small></div>
+        <dl>
+          <div><dt>What you get</dt><dd>I rebuild your tracking, feed and campaigns in the first month, then run your ads every month, reported on the new customers they win.</dd></div>
+          <div><dt>Great for</dt><dd>Brands spending $10,000 or more a month who want a senior operator running their ads, with no account manager in between.</dd></div>
+        </dl>
+        <span class="go">Services →</span>
+      </a>
+    </div>
+    <p class="fine">All prices in Australian dollars. You pay the ad platforms directly, and your ad spend is never marked up.</p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <div>
+        <h2>Book a free fit check</h2>
+        <p>Find out if I can help. No pitch.</p>
+      </div>
+      <div class="final-actions">
+        <a class="btn btn-signal" href="https://perspective9.com/contact">Book a free fit check</a>
+        <a class="btn btn-ghost" href="https://perspective9.com/contact">Book a strategy session, $350</a>
+        <a class="gstrip" href="https://share.google/mgmFYEQjqCUgTwrzD" target="_blank" rel="noopener" style="margin-top:6px"><span class="stars">★★★★★</span><span class="lbl" style="color:#cfe2d7">What clients say on Google</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <img src="https://perspective9.com/_astro/perspective9-logo-white.DV5XGG6A.svg" alt="Logo: Perspective9">
+      <nav>
+        <a href="https://perspective9.com/services">Services</a>
+        <a href="https://perspective9.com/work">Work</a>
+        <a href="#about">About</a>
+        <a href="https://perspective9.com/services">FAQ</a>
+        <a href="https://perspective9.com/partners">Partners</a>
+        <a href="https://perspective9.com/contact">Contact</a>
+      </nav>
+      <div>
+        <a href="mailto:hello@perspective9.com" style="display:block;margin-bottom:14px;color:var(--signal);text-decoration:none;font-weight:600">hello@perspective9.com</a>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/mowazirzada/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg></a>
+          <a href="https://www.instagram.com/perspective9/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="fb"><span>© 2026 Perspective9 · <a href="https://perspective9.com/privacy">Privacy</a></span></div>
+  </div>
+</footer>
+
+<a class="mcta" id="mcta" href="https://perspective9.com/contact"><strong>Book a free fit check</strong><span>Find out if I can help. No pitch.</span></a>
+
+<script>
+(function(){
+  // header
+  var hdr=document.getElementById('hdr'),hero=document.querySelector('.hero'),mcta=document.getElementById('mcta');
+  function onScroll(){
+    var y=window.scrollY,h=hero.offsetHeight-80;
+    hdr.classList.toggle('solid',y>h);
+    mcta.classList.toggle('show',y>h);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.getElementById('burger').addEventListener('click',function(){hdr.classList.toggle('open');hdr.classList.add('solid')});
+  document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open')})});
+
+  // logos
+  var base='https://perspective9.com/_astro/';
+  var L=[['logo-amart.JPevqnrG_ZPKdTe.webp','Amart Furniture'],['logo-blueillusion.vnMH3WbI_ZDcWDJ.webp','Blue Illusion'],['logo-careerone.CA91790A_ZrYSqp.webp','CareerOne'],['logo-gazman.BpAW1UbU_ZUDOcw.webp','Gazman'],['logo-gwf.B5HoPaoB_1WXpBT.webp','George Weston Foods'],['logo-glassons.CPM1A3qS_Z1tao.webp','Glassons'],['logo-hollard.DjJ5ESP4_2o4Wpq.webp','Hollard'],['logo-iag.DJUMnVin_ZkeMHY.webp','IAG'],['logo-msf.DE_t_NBA_Z1ywB6C.webp','Médecins Sans Frontières'],['logo-mydeal.CTSkPz79_ZohYW5.webp','MyDeal'],['logo-nab.BEwQlGhj_Z1YnwQ1.webp','NAB'],['logo-nonib.yw2j8FQH_Z2qfBwp.webp','Noni B Group'],['logo-petbarn.BS-BJQ9m_Zygiif.webp','Petbarn'],['logo-pillowtalk.ZwImsDzD_1cG3Fd.webp','Pillow Talk'],['logo-priceline.0gm_dVJ3_Z1pzSSM.webp','Priceline'],['logo-sheridan.CIluN51Z_j6dHn.webp','Sheridan'],['logo-shiels.yJi-kyZF_eJHIX.webp','Shiels'],['logo-tarocash.DvZfXL5u_Z1boRBA.webp','Tarocash'],['logo-under-armour.Di0UUymt_Z2jDxMw.webp','Under Armour']];
+  function fill(el,list){var h='';for(var k=0;k<2;k++)list.forEach(function(l){h+='<img src="'+base+l[0]+'" alt="'+(k?'':'Logo: '+l[1])+'" loading="lazy"'+(k?' aria-hidden="true"':'')+'>'});el.innerHTML=h}
+  fill(document.getElementById('track1'),L.slice(0,10));
+  fill(document.getElementById('track2'),L.slice(10));
+
+  // with/against switch
+  var sw=document.getElementById('switch');
+  sw.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
+    var s=b.dataset.side;sw.classList.toggle('with',s==='with');
+    sw.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.getElementById('p-against').classList.toggle('on',s==='against');
+    document.getElementById('p-with').classList.toggle('on',s==='with');
+  })});
+
+  // self check
+  var qs=document.querySelectorAll('.qq'),ans={};
+  qs.forEach(function(q,i){q.querySelectorAll('.yn button').forEach(function(b){b.addEventListener('click',function(){
+    ans[i]=+b.dataset.v;q.classList.add('answered');
+    q.querySelectorAll('.yn button').forEach(function(x){x.classList.toggle('sel',x===b)});
+    var yes=0,n=0;for(var k in ans){n++;yes+=ans[k]}
+    document.getElementById('yesCount').textContent=yes;
+    var bars=document.querySelectorAll('#gbar span');bars.forEach(function(s,j){s.classList.toggle('y',j<yes)});
+    document.getElementById('gbar').classList.toggle('ok',yes<2);
+    document.querySelectorAll('.result').forEach(function(r){r.classList.remove('on')});
+    if(yes>=2||n===4){document.querySelector('.result[data-result="'+(yes>=2?'many':'few')+'"]').classList.add('on')}
+  })})});
+
+  // chart
+  var first=[48,34,30,33,36,21,16,34,47,27,34,31,34],ret=[39,11,11,3,4,8,29,32,11,7,6,8,6];
+  var wk=['29 Jun','6 Jul','13 Jul','20 Jul','27 Jul','3 Aug','10 Aug','17 Aug','24 Aug','31 Aug','7 Sep','14 Sep','21 Sep'];
+  var flags={0:1,7:1};
+  var barsEl=document.getElementById('bars'),xa=document.getElementById('xaxis'),hb='',hx='';
+  first.forEach(function(f,i){
+    var tot=f+ret[i];
+    hb+='<div class="bar"><span class="f" data-h="'+(f/90*100)+'"></span><span class="r" data-h="'+(ret[i]/90*100)+'"></span>'+
+      '<span class="tip">'+wk[i]+': '+f+' first · '+ret[i]+' returning</span>'+
+      (flags[i]?'<span class="flag" style="bottom:calc('+(tot/90*100)+'% + 10px)">Email offer</span>':'')+'</div>';
+    hx+='<span>'+wk[i]+'</span>';
+  });
+  barsEl.innerHTML=hb;xa.innerHTML=hx;
+
+  // count up
+  function count(el){
+    var to=parseFloat(el.dataset.count),dec=+el.dataset.dec||0,pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=null,d=1600;
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,3);
+      var v=(to*e).toFixed(dec);if(dec===0)v=Math.round(to*e).toLocaleString('en-AU');
+      el.textContent=pre+v+suf;if(p<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step);
+  }
+
+  // observers
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;var t=e.target;t.classList.add('in');
+    t.querySelectorAll&&t.querySelectorAll('[data-count]').forEach(function(c){if(!c.done){c.done=1;count(c)}});
+    if(t.dataset&&t.dataset.count&&!t.done){t.done=1;count(t)}
+    io.unobserve(t);
+  })},{threshold:.15});
+  document.querySelectorAll('.reveal,.readout .num').forEach(function(el){io.observe(el)});
+
+  var chartIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    document.querySelectorAll('.bar span[data-h]').forEach(function(s,i){setTimeout(function(){s.style.height=s.dataset.h+'%'},Math.floor(i/2)*60)});
+    chartIO.disconnect();})},{threshold:.3});
+  chartIO.observe(document.getElementById('plot'));
+
+  var pipe=document.getElementById('pipe');
+  var pipeIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+    pipe.querySelectorAll('.stage').forEach(function(s,i){setTimeout(function(){s.classList.add('lit');pipe.style.setProperty('--p',(i/2*100)+'%')},400+i*500)});
+    pipeIO.disconnect();})},{threshold:.4});
+  pipeIO.observe(pipe);
+})();
+</script>
+</body>
+</html>
